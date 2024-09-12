@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sec1 {
+  background-image: url("div.shape-right-top.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  /* background-color: "white"; */
+}
+
+.section3 {
+  background-image: url("colon.png");
+  background-repeat: no-repeat;
+  background-image-color: "black";
+  background-position: 93% 11%;
+}
+
+/* 
+ */
+
+/* import 'react-calendar/dist/Calendar.css'; */
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Noto+Sans+JP:wght@400;900&family=Poppins:ital,wght@0,500;1,400&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbox {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0a36;
+}
+
+.fa-brands {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+.nav a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  margin: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav a::after {
+  content: " ";
+  width: 100%;
+  height: 3px;
+  background: white;
+  /* to its parent container */
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.nav a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#loginbtn {
+  color: white;
+  background: transparent;
+  /* font-size: 1.2rem; */
+  /* color: transparent; */
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  /* text-align: center; */
+  margin-right: 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition-duration: 0.8s;
+}
+
+#loginbtn:hover {
+  background: rgb(242, 231, 231);
+  color: #0f0a36;
+  /* font-size: 2rem; */
+}
+
+.loginbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 200px);
+  /* background-color: blue;
+    background:transparent; */
+  /* background: rgb(127, 132, 168); */
+}
+
+.login form {
+  display: flex;
+}
+
+.login {
+  position: relative;
+  /* background-color: #0f0a36; */
+  width: 400px;
+  height: 440px;
+  /* color: white; */
+  background: #d1d1d6;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  /* position: relative; */
+  display: flex;
+  /* flex-direction: column; */
+  /* padding: 40px; */
+  /* By this in start the login page does not show anything if we want to show the content then it shows else nothing  */
+  /* we make this scale(1) by clicking login in the home Page */
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+  justify-content: center;
+  align-items: center;
+  /* we make this overflow because it remove the unusual tab like login or registration  */
+  overflow: hidden;
+}
+/* .active-poopup add when we click login btn  */
+.login.active-popup {
+  transform: scale(1);
+}
+
+.login .closeicon {
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom-right-radius:13px; */
+  font-size: 1.8rem;
+  width: 43px;
+  color: white;
+  height: 45px;
+  background: #0f0a36;
+  top: 0;
+  right: 0;
+  /* transform: scale(0); */
+}
+
+.wrapper {
+  width: 400px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Login part we set it to none */
+.loginlogin {
+  /* display: none; */
+}
+
+.login.active .wrapper.loginlogin {
+  transition: none;
+  transform: translateX(-500px);
+  /* display: none; */
+}
+
+/* For new Registration  */
+
+/* for new registration  */
+.login .wrapper.registration {
+  position: absolute;
+  transform: translateX(500px);
+  /* display: none;    */
+}
+.login.active .wrapper.registration {
+  transition: none;
+  position: absolute;
+  transform: translateX(0px);
+}
+.loginheading {
+  font-size: 2rem;
+  font-weight: 600;
+  align-items: center;
+  color: #162938;
+}
+
+.Emailbox {
+  /* border: 2px solid #0f0a36; */
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  height: 45px;
+  position: relative;
+  border-bottom: 2px solid #0f0a36;
+}
+.Emailbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #0f0a36;
+  /* font-weight: 900; */
+  /* pointers events provide more information about the input device such as mouse touch pen , pressure and tilt  */
+  pointer-events: none;
+  transition: 0.5s;
+}
+/* it mean it will move label -5px to its actutal position when we click to the input  */
+
+.Emailbox input:focus ~ label,
+.Emailbox input:valid ~ label {
+  /* it move outside of the container because we mark its position as absolute */
+  top: -7px;
+}
+
+.Emailbox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f0a36;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 35px 0 5px;
+}
+
+.Emailbox i {
+  position: absolute;
+  right: 6px;
+  font-size: 1.1rem;
+  line-height: 27px;
+  /* top: 15px; */
+}
+
+/* Reset box */
+
+.resetbox {
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin: -10px 0 15px;
+  font-weight: 500;
+  color: #0f0a36;
+}
+.resetbox label input {
+  font-size: 0.9rem;
+  accent-color: #0f0a36;
+  margin-right: 5px;
+}
+
+.resetbox a {
+  text-decoration: none;
+}
+
+.resetbox a:hover {
+  text-decoration: underline;
+}
+
+/* submit btn  */
+.submitbtn {
+  background: #0f0a36;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: white;
+  height: 65px;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* donot register system  */
+.newregister {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: #0f0a36;
+}
+.newregister a {
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+.newregister a:hover {
+  text-decoration: underline;
+}
+
+/* done with the login part now have to create a signup  */
