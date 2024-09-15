@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 const RegisterUser = () => {
   const userdata = useRef();
@@ -31,10 +32,15 @@ const RegisterUser = () => {
               <label htmlFor="password">Password</label>
             </div>
 
-            <button type="submit" className="submitbtn bg-[#31B099]">
-              {/* <button type="submit" className="submitbtn"> */}
-              Register
-            </button>
+            <Link to={"/Login"}>
+              <button
+                type="submit"
+                className="submitbtn bg-[#31B099] w-[300px] h-[50px]"
+              >
+                {/* <button type="submit" className="submitbtn"> */}
+                Register
+              </button>
+            </Link>
             <div className="newregister">
               <p>
                 Already have an account <a href="">Login</a>

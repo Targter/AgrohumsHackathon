@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 const LoginUser = () => {
   const maildata = useRef();
   const password = useRef();
@@ -26,10 +27,16 @@ const LoginUser = () => {
               <label htmlFor="password">Password</label>
             </div>
 
-            <button type="submit" className="submitbtn bg-[#31B099]">
-              {/* <button type="submit" className="submitbtn"> */}
-              Login
-            </button>
+            <Link to={"/"}>
+              <button
+                type="submit"
+                className="submitbtn bg-[#31B099] w-[300px] h-[50px]"
+              >
+                {" "}
+                {/* <button type="submit" className="submitbtn"> */}
+                Login
+              </button>
+            </Link>
             <div className="newregister">
               <p>
                 Don't have an account?

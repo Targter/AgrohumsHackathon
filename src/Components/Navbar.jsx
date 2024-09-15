@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
@@ -8,10 +10,12 @@ const Navbar = () => {
           </div>
           <div className="additionalbox max-w-[300px] w-[40%] ">
             <ul className="flex w-full justify-around text-xs">
-              <li>HOME</li>
-              <li>SERVICES</li>
+              <Link to={"/"}>Home</Link>
+              <Link to={"/GeneratePage"}>
+                {" "}
+                <li>SERVICES</li>
+              </Link>
               <li>LEARNING HUB</li>
-              <li></li>
             </ul>
           </div>
         </div>
